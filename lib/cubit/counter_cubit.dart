@@ -5,6 +5,9 @@ class CounterCubit extends Cubit<int> {
   CounterCubit() : super(0);
 
   void increment() {
+    if (state == 10) {
+      return;
+    }
     emit(state + 1);
   }
 
